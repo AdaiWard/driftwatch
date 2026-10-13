@@ -1,0 +1,29 @@
+{
+  "name": "driftwatch",
+  "version": "0.1.0",
+  "description": "Self-hosted visual regression testing with Playwright and pixelmatch",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "check": "npm run typecheck && npm test",
+    "typecheck": "tsc --noEmit -p packages/core && tsc --noEmit -p apps/api && tsc --noEmit -p apps/worker",
+    "test": "node --import tsx --test packages/core/test/*.test.ts",
+    "dev:api": "npm run dev --workspace @driftwatch/api",
+    "dev:worker": "npm run dev --workspace @driftwatch/worker",
+    "install:browsers": "playwright install chromium",
+    "smoke": "sh scripts/smoke.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.2"
+  }
+}

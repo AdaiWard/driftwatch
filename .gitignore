@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.cache/
+.coverage/
+coverage/
+.drizzle/
+.env
+.env.*
+!.env.example
+.data/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tsbuildinfo

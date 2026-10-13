@@ -1,0 +1,11 @@
+.git
+.github
+.data
+.env
+.env.*
+!.env.example
+node_modules
+dist
+coverage
+*.log
+README.ru.md

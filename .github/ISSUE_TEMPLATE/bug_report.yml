@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible problem in DriftWatch
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve DriftWatch. Please remove secrets from logs and examples.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the actual and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |-
+        1. Start DriftWatch with ...
+        2. Submit a build with ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node.js version, storage driver, and deployment method.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      render: shell
