@@ -11,7 +11,7 @@
     "@driftwatch/core": "*",
     "bullmq": "^6.3.13",
     "dotenv": "^16.4.5",
-    "ioredis": "^5.11.1",
+    "ioredis": "^6.0.0",
     "playwright": "^1.64.0"
   }
 }
